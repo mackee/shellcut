@@ -38,8 +38,8 @@ func (m matchers) Match(row []string) bool {
 func main() {
 	var fieldsOpt string
 	var grepOpt string
-	flag.StringVar(&fieldsOpt, "f", "", "output fields indexes that is 1-origin. Ex. -f 1,2 or -f 1-10")
-	flag.StringVar(&grepOpt, "g", "", "filter row of fields. Ex. -g 10=foobar,11=boo")
+	flag.StringVar(&fieldsOpt, "f", "", "indices on a field for output. 1-origin. Ex. -f 1,2 or -f 1-10")
+	flag.StringVar(&grepOpt, "g", "", "filter row by field value. Ex. -g 10=foobar,11=boo")
 	flag.Parse()
 
 	if fieldsOpt == "" {
